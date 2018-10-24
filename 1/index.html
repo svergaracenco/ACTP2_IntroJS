@@ -10,8 +10,51 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
+  <section class="main">
+  <img src="https://picsum.photos/450/300/?random>" class="gray">
+  <img src="https://picsum.photos/260/300/?random>" class="gray">
+  <img src="https://picsum.photos/540/300/?random>" class="gray">
+  <img src="https://picsum.photos/800/300/?random>" class="gray">
+  <img src="https://picsum.photos/455/300/?random>" class="gray">
+   <img src="https://picsum.photos/350/300/?random>" class="gray">
+  <img src="https://picsum.photos/360/300/?random>" class="gray">
+  <img src="https://picsum.photos/540/300/?random>" class="gray">
+  
 
+</section>
   </body>
+  
+  
+  <style>
+	  .main {width: 1260px; margin: 0 auto;}
+	  body {background-color: black;}
+	
+	  
+	  .gray {
+		filter:         url(~"data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+    filter: gray; 
+	}
+	  
+
+	  
+	  
+	</style>
 </html>
+
+   <script type="text/javascript">
+    
+        $(document).ready(function(){
+          $("img").on('click',
+                  function () {
+                    $(this).removeClass("gray");
+                  }
+             );
+        });
+    </script>
